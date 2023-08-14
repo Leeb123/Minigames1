@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.mini-games {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.puzzle-container,
+.memory-game-container {
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.puzzle-container h2,
+.memory-game-container h2 {
+    margin-top: 0;
+}
+
+.puzzle-game,
+.memory-game {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.puzzle-tile,
+.memory-card {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.memory-card.flipped {
+    background-color: #f0f0f0;
+    pointer-events: none;
+    cursor: default;
+}
+
+.memory-game-button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.memory-game-button:hover {
+    background-color: #444;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
